@@ -24,8 +24,8 @@ public class Contact {
                 ", city-'" + city + '\'' +
                 ", state-'" + state + '\'' +
                 ", email-'" + email + '\'' +
-                ", phone-'" + phone +
-                ", zip" + zip + '\'';
+                ", phone-'" + phone + '\''+
+                ", zip-'" + zip + '\'';
                 
     }
 }

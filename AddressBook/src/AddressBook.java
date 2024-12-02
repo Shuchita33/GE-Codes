@@ -21,12 +21,20 @@ public class AddressBook {
         int phone = sc.nextInt();
         System.out.println("Enter ZipCode");
         int zip = sc.nextInt();
-        Contact c1 = new Contact(name, lname, city, state, email, phone, zip);
-        adBook.add(c1);
-        System.out.println("Contact is added");
-    }
+        
+        
+        Contact newContact = new Contact(name, lname, city, state, email, phone, zip);
 
+        // Add the contact to the address book
+        adBook.add(newContact);
+        System.out.println("Contact has been added successfully!");
+    }
+    
+   
+    
     public void display() {
-        System.out.println(adBook);
+    	for (Contact contact : adBook) {
+            System.out.println(contact);
+        }
     }
 }
