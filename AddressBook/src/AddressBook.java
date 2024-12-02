@@ -60,9 +60,23 @@ public class AddressBook {
         }
       }
     
+    public void deleteContact() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the first name of the contact to delete:");
+        String name = sc.next();
+        boolean removed = adBook.removeIf(contact -> contact.firstName.equalsIgnoreCase(name));
+        
+        if (removed) {
+            System.out.println("Contact deleted successfully.");
+        } else {
+            System.out.println("Contact not found.");
+        }
+    }
+    
     public void display() {
     	for (Contact contact : adBook) {
             System.out.println(contact);
         }
+    	if(adBook.size()==0) System.out.println("AddressBook is empty");
     }
 }
