@@ -7,11 +7,13 @@ public class Main {
         int i = 1;
         Scanner sc = new Scanner(System.in);
         do {
-            System.out.println("Enter 1 to create a new contact \nEnter 2 to display existing contacts");
+            System.out.println("Enter 1 to create a new contact \nEnter 2 to display existing contacts \n"
+            		+ "Enter 3 to edit contacts");
             int input = sc.nextInt();
             switch (input) {
                 case 1 -> a1.createContact(); // This is UC 1
                 case 2 -> {System.out.println("Contacts:\n"); a1.display();}
+                case 3 -> a1.editContact();
                 default -> System.out.println("Wrong input");
             }
 
