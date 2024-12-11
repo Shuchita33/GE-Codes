@@ -10,7 +10,7 @@ public class Main {
             System.out.println("Enter 1 -> Add contact\nEnter 2 -> Display all contacts");
             int userInput = sc.nextInt();
             switch (userInput){
-                case 1 -> a1.addToAdBook(Contact.createContact());
+                case 1 -> a1.addToAdBook(Contact.createContact(sc));
                 case 2 -> a1.display();
                 default -> System.out.println("Wrong input");
             }
@@ -18,7 +18,8 @@ public class Main {
             input = sc.nextInt();
         }while (input != 0);
        
-    	Contact c1=Contact.createContact();
+    	Contact c1=Contact.createContact(sc);
     	//System.out.println(c1);
+    	
     }
 }

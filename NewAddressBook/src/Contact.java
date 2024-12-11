@@ -1,20 +1,52 @@
 import java.util.Scanner;
 
-public class Contact {
+public class Contact implements GetName{
     private String name;
     private String email;
     private String state;
     private int phoneNumber;
+    
+    public String getName() {
+        return name;
+    }
 
-    public Contact(String name, String email, String state, int phoneNumber) {
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public int getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(int phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+    
+    public Contact(String name, String state,String email,int phoneNumber) {
         this.name = name;
         this.email = email;
         this.state = state;
         this.phoneNumber = phoneNumber;
     }
-
-    public static Contact createContact(){
-        Scanner sc = new Scanner(System.in);
+    
+    public static Contact createContact(Scanner sc ){
+        //Scanner sc = new Scanner(System.in);
         System.out.println("Enter name");
         String name  = sc.next();
         System.out.println("Email");
@@ -23,7 +55,7 @@ public class Contact {
         String state  = sc.next();
         System.out.println("PhoneNumber");
         int phone  = sc.nextInt();
-
+        //sc.close();
         return new Contact(name,email,state,phone);
 
     }
